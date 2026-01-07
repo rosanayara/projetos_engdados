@@ -8,3 +8,6 @@ Este projeto implementa conhecimentos adquiridos sobre pipeline de dados, onde �
 3. Execute o script:
    ```bash
    python temperatura.py
+
+### Visualização dos Dados Coletados
+![Comparativo de Temperaturas](meu_grafico.png)
