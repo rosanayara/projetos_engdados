@@ -1,0 +1,10 @@
+# (Chaves de API)
+.env
+
+# Banco de dados local
+*.db
+
+# Pastas de ambiente virtual e cache do Python
+_pycache_/
+venv/
+.vscode/
