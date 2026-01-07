@@ -41,23 +41,30 @@ def pipeline_etl(cidade):
         print(df)
         print()
         print("=" * largura)
-        print("DADOS DE CONSULTA SALVOS COM SUCESSO!".center(largura))
-        print("=" * largura)
+        print("Dados armazenados com sucesso!".center(largura))
+        print()
+        
 
     except Exception as e:
         print(f"Ocorreu um erro: {e}")
 
 if __name__ == "__main__":
-    largura = 60
-    print("=" * largura)
-    print("SISTEMA DE MONITORAMENTO CLIMÁTICO".center(largura))
-    print("=" * largura)
-    print()
-    cidade_usuario = input("Digite o nome da cidade em que deseja obter informações ou 'sair' para encerrar: ")
-    print()
-    if cidade_usuario.lower()!= 'sair':
+
+    while True:
+        largura = 60
+        print("=" * largura)
+        print("SISTEMA DE MONITORAMENTO CLIMÁTICO".center(largura))
+        print("=" * largura)
+        print()
+        cidade_usuario = input("Digite o nome da cidade em que deseja obter informações ou 'sair' para encerrar: ").strip()
+        print()
+        if cidade_usuario.lower() == 'sair':  
+            print("=" * largura)
+            print("Programa encerrado. Volte Sempre!".center(largura))
+            print("=" * largura)
+            break
+        if not cidade_usuario:
+            print('Por favor, digite um nome de cidade válido.')
+            continue
+
         pipeline_etl(cidade_usuario)
-    else:
-        print("=" * largura)
-        print("Programa encerrado. Volte Sempre!".center(largura))
-        print("=" * largura)
